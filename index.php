@@ -54,15 +54,16 @@ $hotels = [
 <body>
 
 <div class="container">
-		<h1>Php Hotel List</h1>
+		<h1 class="text-center p-4">Php Hotel List</h1>
+        
 		<table class="table">
 			<thead>
 				<tr>
-					<th>Name</th>
-					<th>Description</th>
-					<th>Parking</th>
-					<th>Vote</th>
-					<th>Distance to center</th>
+					<th class="table-info">Name</th>
+					<th class="table-info">Description</th>
+					<th class="table-info">Parking</th>
+					<th class="table-info">Vote</th>
+					<th class="table-info">Distance to center</th>
 				</tr>
 			</thead>
 			<tbody>
