@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Hotel</title>
-</head>
-<body>
-    <?php
+<!-- array hotels -->
+<?php
 
 $hotels = [
     [
@@ -49,6 +41,26 @@ $hotels = [
 
 ?>
 
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Hotel</title>
+</head>
+<body>
+
+<!-- stampa dei dati di tutti gli hotel -->
+    <?php
+    foreach ($hotels as $hotel) {
+        echo '<h2>' . $hotel['name'] . '</h2>';
+        echo '<p>' . $hotel['description'] . '</p>';
+        echo '<p>Parcheggio: ' . ($hotel['parking'] ? 'si' : 'no') . '</p>';
+        echo '<p>Voto: ' . $hotel['vote'] . '</p>';
+        echo '<p>Distanza dal centro: ' . $hotel['distance_to_center'] . ' km</p>';
+        echo '<hr>';
+    }
+    ?>
 </body>
 </html>
