@@ -53,17 +53,31 @@ $hotels = [
 </head>
 <body>
 
-<!-- stampa dei dati di tutti gli hotel -->
-    <?php
-    foreach ($hotels as $hotel) {
-        echo '<h2>' . $hotel['name'] . '</h2>';
-        echo '<p>' . $hotel['description'] . '</p>';
-        echo '<p>Parcheggio: ' . ($hotel['parking'] ? 'si' : 'no') . '</p>';
-        echo '<p>Voto: ' . $hotel['vote'] . '</p>';
-        echo '<p>Distanza dal centro: ' . $hotel['distance_to_center'] . ' km</p>';
-        echo '<hr>';
-    }
-    ?>
+<div class="container">
+		<h1>Php Hotel List</h1>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Parking</th>
+					<th>Vote</th>
+					<th>Distance to center</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ($hotels as $hotel) { ?>
+				<tr>
+					<td><?php echo $hotel['name']; ?></td>
+					<td><?php echo $hotel['description']; ?></td>
+					<td><?php echo ($hotel['parking'] ? 'Yes' : 'No'); ?></td>
+					<td><?php echo $hotel['vote']; ?></td>
+					<td><?php echo $hotel['distance_to_center']; ?> km</td>
+				</tr>
+				<?php } ?>
+			</tbody>
+		</table>
+</div>
 
 
    <!-- bootstrap script -->
